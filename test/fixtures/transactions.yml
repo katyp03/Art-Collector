@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  user_id: 1
+  address: MyString
+  payment_amount: 1
+  lease_duration: 1
+  user: one
+
+two:
+  id: 1
+  user_id: 1
+  address: MyString
+  payment_amount: 1
+  lease_duration: 1
+  user: two

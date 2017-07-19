@@ -1,0 +1,47 @@
+<%= form_with(model: appraisal, local: true) do |form| %>
+  <% if appraisal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(appraisal.errors.count, "error") %> prohibited this appraisal from being saved:</h2>
+
+      <ul>
+      <% appraisal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :id %>
+    <%= form.number_field :id, id: :appraisal_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :item_id %>
+    <%= form.number_field :item_id, id: :appraisal_item_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :previous_owner %>
+    <%= form.text_field :previous_owner, id: :appraisal_previous_owner %>
+  </div>
+
+  <div class="field">
+    <%= form.label :value %>
+    <%= form.number_field :value, id: :appraisal_value %>
+  </div>
+
+  <div class="field">
+    <%= form.label :condition %>
+    <%= form.number_field :condition, id: :appraisal_condition %>
+  </div>
+
+  <div class="field">
+    <%= form.label :item_id %>
+    <%= form.text_field :item_id, id: :appraisal_item_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

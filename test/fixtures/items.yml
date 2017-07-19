@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  artist_id: 1
+  title: MyString
+  medium: MyString
+  style: MyString
+  size: 1
+  yoc: 1
+  origin_country: MyString
+  artist: one
+
+two:
+  id: 1
+  artist_id: 1
+  title: MyString
+  medium: MyString
+  style: MyString
+  size: 1
+  yoc: 1
+  origin_country: MyString
+  artist: two
