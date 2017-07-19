@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+/*for carousel:*/
+#myCarousel {
+	height: 65vh;
+}
+
+ #myCarousel .carousel-inner {
+ 	width: 80%;
+ 	height: 100%;
+ 	margin: 0 auto;
+ }
+
+ #myCarousel .item {
+ 	width: 80%;
+ 	height: 100%;
+ 	margin: 0 auto;
+ }
+
+ .item img {
+ 	max-height: 100%;
+ }
+/*end of carousel*/
