@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/admin' => 'static_pages#admin'
+  get '/admin' => 'items#new'
 
   get '/main' => 'static_pages#main'
 
