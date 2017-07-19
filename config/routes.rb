@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   get '/signin' => 'home#index'
 
+
   resources :appraisals
   resources :items
   resources :transactions
