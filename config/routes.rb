@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  get '/admin' => 'static_pages#admin'
+  get '/admin' => 'items#new'
 
   get '/main' => 'static_pages#main'
 
   get '/signin' => 'home#index'
+
 
   resources :appraisals
   resources :items
