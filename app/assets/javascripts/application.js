@@ -17,7 +17,7 @@
 $(document).ready(function(){
     // Activate Carousel
     $("#myCarousel").carousel();
-    
+
     // Enable Carousel Indicators
     $(".item1").click(function(){
         $("#myCarousel").carousel(0);
@@ -34,7 +34,7 @@ $(document).ready(function(){
     $(".item5").click(function(){
         $("#myCarousel").carousel(4);
     });
-    
+
     // Enable Carousel Controls
     $(".left").click(function(){
         $("#myCarousel").carousel("prev");
