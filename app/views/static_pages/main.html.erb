@@ -23,6 +23,28 @@
   </div>
 </div>
 
+<div class="body">
+  <div class="row">
+    <div class="col-md-6">
+      <div id="styleCatagory" onclick="styleModalShow()">
+        <h3>Style</h3>
+      </div>
+      <div id="dateCatagory" onclick="dateModalShow()">
+        <h3>Date</h3>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div id="mediumCatagory" onclick="mediumModalShow()">
+        <h3>Medium</h3>
+      </div>
+      <div id="sizeCatagory" onclick="sizeModalShow()">
+        <h3>Size</h3>
+      </div>
+    </div>
+  </div>
+
+</div>
+
 <div id="recentDiv">
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -77,28 +99,6 @@
 
     <div class="item">
       <%# image_tag @items[2].image %>
-    </div>
-
-<div class="body">
-  <div class="row">
-    <div class="col-md-6">
-      <div id="styleCatagory" onclick="styleModalShow()">
-        <h3>Style</h3>
-      </div>
-      <div id="dateCatagory" onclick="dateModalShow()">
-        <h3>Date</h3>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div id="mediumCatagory" onclick="mediumModalShow()">
-        <h3>Medium</h3>
-      </div>
-      <div id="sizeCatagory" onclick="sizeModalShow()">
-        <h3>Size</h3>
-      </div>
-    </div>
-  </div>
-
-</div>
+    </div> -->
 
 <%= javascript_include_tag('static_pages.js') %>
