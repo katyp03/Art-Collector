@@ -2,15 +2,28 @@ body {
   background-color: #fff;
   color: #333;
   margin: 33px;
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: "Oswald";
   font-size: 13px;
   line-height: 18px;
 }
 
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: "Nixie One";
   font-size: 13px;
   line-height: 18px;
+}
+
+.container {
+  font-family: "Nixie One";
+  font-size: 18px;
+}
+
+#logo {
+  float: left;
+}
+
+footer {
+  font-family: "Nixie One";
 }
 
 pre {
@@ -81,4 +94,25 @@ div {
 
 label {
   display: block;
+}
+
+header {
+  border-bottom: 2px solid black;
+}
+
+div.col-sm-3 {
+  padding-top: 20px;
+  text-align: center;
+}
+
+div.col-sm-2 {
+  padding-top: 70px;
+  text-align: center;
+  font-size: 20px;
+}
+
+div#admin {
+  padding-top: 10px;
+  font-size: 15px;
+  text-align: center;
 }

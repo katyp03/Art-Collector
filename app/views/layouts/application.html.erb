@@ -7,6 +7,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nixie+One|Oswald" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
@@ -21,6 +22,16 @@
   <body>
     <header>
       <div class="container">
+        <% if current_user && current_user.admin == true %>
+          <div class="row">
+            <div class="col-sm-9">
+
+            </div>
+            <div id="admin" class="col-sm-2">
+              <%= link_to("Admin", '/admin') %>
+            </div>
+          </div>
+        <% end %>
         <div class="row">
           <div class="col-sm-3">
             <img src="/assets/ArtCollector.png" style="width:320px;">
@@ -49,10 +60,6 @@
   	<p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
-    <footer>
-      <% if current_user && current_user.admin == true %>
-        <%= link_to("Admin", '/admin') %>
-      <% end %>
-    </footer>
+    <%= javascript_include_tag('static_pages.js') %>
   </body>
 </html>
