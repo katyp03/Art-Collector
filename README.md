@@ -37,3 +37,10 @@ rails d scaffold Transaction
 rails d scaffold Item
 rails d scaffold TransactionItem
 rails d scaffold Appraisal -->
+
+<!-- rails d scaffold Transaction
+rails d scaffold TransactionItem
+
+rails g scaffold Sale user_id:integer address:string payment_amount:integer lease_duration:integer user:belongs_to
+rails g scaffold SaleItem transaction_id:integer item_id:integer transaction:belongs_to item:belongs_to
+ -->
