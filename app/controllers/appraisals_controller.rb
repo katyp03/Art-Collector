@@ -69,6 +69,6 @@ class AppraisalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def appraisal_params
-      params.require(:appraisal).permit(:id, :item_id, :previous_owner, :value, :condition, :item_id)
+      params.require(:appraisal).permit(:id, :item_id, :previous_owner, :value, :condition)
     end
 end
