@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170719174325) do
+ActiveRecord::Schema.define(version: 20170720143459) do
 
   create_table "appraisals", force: :cascade do |t|
     t.integer "item_id"
@@ -20,6 +20,13 @@ ActiveRecord::Schema.define(version: 20170719174325) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["item_id"], name: "index_appraisals_on_item_id"
+  end
+
+  create_table "artists", force: :cascade do |t|
+    t.string "fname"
+    t.string "lname"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "items", force: :cascade do |t|
@@ -35,23 +42,23 @@ ActiveRecord::Schema.define(version: 20170719174325) do
     t.index ["artist_id"], name: "index_items_on_artist_id"
   end
 
-  create_table "transaction_items", id: false, force: :cascade do |t|
-    t.integer "transaction_id"
+  create_table "sale_items", id: false, force: :cascade do |t|
+    t.integer "sale_id"
     t.integer "item_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["item_id"], name: "index_transaction_items_on_item_id"
-    t.index ["transaction_id"], name: "index_transaction_items_on_transaction_id"
+    t.index ["item_id"], name: "index_sale_items_on_item_id"
+    t.index ["sale_id"], name: "index_sale_items_on_sale_id"
   end
 
-  create_table "transactions", force: :cascade do |t|
+  create_table "sales", force: :cascade do |t|
     t.integer "user_id"
     t.string "address"
     t.integer "payment_amount"
     t.integer "lease_duration"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_transactions_on_user_id"
+    t.index ["user_id"], name: "index_sales_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
