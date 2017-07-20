@@ -3,10 +3,9 @@
 <ul>
   <% @items.each do |item| %>
     <a href="/items/<%= item.id %>">
-      <li class="galleryPic" style="background-image:url(<%= Item.find(item.id).picture %>)"></li>
-      <li><%= item.id %></li>
-      <li><%= item.title %></li>
-      <li><%= item.artist.full_name %></li>
+      <li class="galleryPic" style="background-image:url(<%= Item.find(item.id).picture %>)">
+      <span class="galleryPicTitle"><%= item.title %></span><br />
+      <span class="galleryPicArtist"><%= item.artist.full_name %></span></li>
     </a>
   <% end %>
 </ul>
