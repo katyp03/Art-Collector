@@ -8,11 +8,19 @@
 
 		list-style-type: none;
 
-		.galleryPic {
-			background-size: cover;
-    		height: 240px;
-    		width: 240px;
-    		display: inline-block;
+		li {
+
+			width: 250px;
+			height: 250px;
+			margin: 0;
+
+			li.galleryPic {
+				background-size: cover;
+    			height: 240px;
+    			width: 240px;
+    			display: inline-block;
+    			margin-right: 5px;
+    		}
     	}
 	}
 }
