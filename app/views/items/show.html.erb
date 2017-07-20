@@ -31,18 +31,18 @@
 </p>
 
 <p>
-  <strong>Yoc:</strong>
+  <strong>Year Of Creation:</strong>
   <%= @item.yoc %>
 </p>
 
 <p>
-  <strong>Origin country:</strong>
+  <strong>Origin Country:</strong>
   <%= @item.origin_country %>
 </p>
 
 <p>
-  <strong>Artist:</strong>
-  <%= @item.artist %>
+  <strong>Picture:</strong>
+  <%= image_tag @item.picture.url %>
 </p>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |

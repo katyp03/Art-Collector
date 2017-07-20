@@ -37,6 +37,10 @@ ActiveRecord::Schema.define(version: 20170720143459) do
     t.integer "size"
     t.integer "yoc"
     t.string "origin_country"
+    t.string "picture_file_name"
+    t.string "picture_content_type"
+    t.integer "picture_file_size"
+    t.datetime "picture_updated_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["artist_id"], name: "index_items_on_artist_id"
