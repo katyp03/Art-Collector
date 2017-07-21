@@ -12,28 +12,19 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.number_field :user_id, id: :sale_user_id %>
+    <%= form.text_field :address, id: :sale_address, placeholder: 'City' %>
   </div>
 
   <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address, id: :sale_address %>
+    <%= form.number_field :lease_duration, id: :sale_lease_duration, placeholder: 'Lease Duration (Months)' %>
   </div>
 
   <div class="field">
-    <%= form.label :payment_amount %>
-    <%= form.number_field :payment_amount, id: :sale_payment_amount %>
+    <%= form.hidden_field :user_id, id: :sale_user_id %>
   </div>
 
   <div class="field">
-    <%= form.label :lease_duration %>
-    <%= form.number_field :lease_duration, id: :sale_lease_duration %>
-  </div>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id, id: :sale_user_id %>
+    <%= form.hidden_field :payment_amount, id: :sale_payment_amount %>
   </div>
 
   <div class="actions">
