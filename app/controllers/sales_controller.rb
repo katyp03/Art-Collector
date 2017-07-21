@@ -1,5 +1,6 @@
 class SalesController < ApplicationController
   before_action :set_sale, only: [:show, :edit, :update, :destroy]
+  before_action :login_check
 
   # GET /sales
   # GET /sales.json
@@ -70,5 +71,12 @@ class SalesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def sale_params
       params.require(:sale).permit(:user_id, :address, :payment_amount, :lease_duration, :item_id)
+    end
+    def login_check
+      if user_signed_in?
+
+      else
+        redirect_to signin_path
+      end
     end
 end

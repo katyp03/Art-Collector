@@ -89,7 +89,7 @@ header {
 
 div.col-sm-3 {
   padding-top: 20px;
-  text-align: center;
+  padding-left: 0px;
 }
 
 div.col-sm-2 {
@@ -101,5 +101,10 @@ div.col-sm-2 {
 div#admin {
   padding-top: 10px;
   font-size: 15px;
+  text-align: center;
+}
+
+div#sales {
+  padding-top: 10px;
   text-align: center;
 }

@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Sales - <%= current_user.full_name %></h1>
+<h1>Edit User Info - <%= current_user.full_name if current_user %></h1>
+<%= render 'edit' %>
+
+<h1>Sales - <%= current_user.full_name if current_user %></h1>
 
 <% @sales.each do |sale| %>
     <% sale.items.each do |item| %>
