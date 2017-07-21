@@ -35,3 +35,38 @@
  	max-height: 100%;
  }
 /*end of carousel*/
+
+/*for all forms:*/
+body form input[type=email], body form input[type=password], body form input[type=text], body form input[type=number] {
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #737373;
+	width: 200px;
+	/*color: #0C1385;*/
+	/*font-size: 20px;*/
+	/*font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;*/
+	display: block;
+	margin: auto;
+}
+/*end of forms*/
+
+/*log in (in devise sessions new):*/
+#signInDiv {
+	margin: 0 auto;
+	text-align: center;
+}
+/*end of log in*/
+
+/*sign up (in devise registrations new):*/
+#signUpDiv {
+	margin: 0 auto;
+	text-align: center;
+}
+/*end of sign up*/
+
+/*forgot password form:*/
+#forgotPasswordDiv {
+	margin: 0 auto;
+	text-align: center;
+}
+/*end of forgot password form*/
