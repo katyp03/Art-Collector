@@ -1,3 +1,10 @@
+function showAppModal(){
+	document.getElementById('modalBody').style.display = "block";
+}
+function closeAppModal(){
+	document.getElementById('modalBody').style.display = "none";
+}
+
 document.addEventListener("turbolinks:load", function(){
 	const elMoreInfoButton = document.querySelector('#moreInfoButton');
 	if(elMoreInfoButton) {

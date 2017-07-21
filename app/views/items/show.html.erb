@@ -43,13 +43,17 @@
 
 <button id="moreInfoButton" class="hideInfoButton" type="button">More Info</button><br /><br />
 
-<button id="appraisalButton" type="button">See Last Appraisal</button><br /><br />
+<button id="appraisalButton" type="button" onclick="showAppModal()">See Last Appraisal</button><br /><br />
 
-<div class="modalBody">
-  <div class="appraisalModal">
-    <%= @item.appraisals[0].previous_owner %>
-    <%= @item.appraisals[0].value %>
-    <%= @item.appraisals[0].condition %>
+<div id="modalBody">
+  <div id="appraisalModal">
+    Previous Owner: <%= @item.appraisals[0].previous_owner %>
+    <br>
+    Value: $<%= @item.appraisals[0].value %>
+    <br>
+    Condition: <%= @item.appraisals[0].condition %>
+    <br>
+    <button type="button" onclick="closeAppModal()">Close</button>
   </div>
 </div>
 
