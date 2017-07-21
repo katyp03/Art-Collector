@@ -17,6 +17,7 @@
 /*for carousel:*/
 #myCarousel {
 	height: 65vh;
+	margin-top: 20px;
 }
 
  #myCarousel .carousel-inner {
@@ -70,3 +71,7 @@ body form input[type=email], body form input[type=password], body form input[typ
 	text-align: center;
 }
 /*end of forgot password form*/
+
+h2 {
+	text-align: center;
+}
