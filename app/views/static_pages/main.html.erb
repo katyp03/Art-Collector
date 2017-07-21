@@ -1,26 +1,35 @@
 <div id="styleModal">
   <div id="styleFilter">
-    <p>tbd</p>
-    <button type="button" onclick="closeModal()">Close</button>
-  </div>
-</div>
-<div id="dateModal">
-  <div id="dateFilter">
-    <% @items.date.each do %>
-      
+    <% Item.find_by_sql("SELECT DISTINCT style FROM items ORDER BY style").each do |style| %>
+      <a href="/items/style/<%= style.style %>"><%= style.style %></a>
     <% end %>
     <button type="button" onclick="closeModal()">Close</button>
   </div>
 </div>
-<div id="mediumModal">
-  <div id="mediumFilter">
-    <p>tbd</p>
+
+<div id="dateModal">
+  <div id="dateFilter">
+    <% Item.find_by_sql("SELECT DISTINCT yoc FROM items ORDER BY yoc").each do |date| %>
+      <a href="/items/date/<%= date.yoc %>"><%= date.yoc %></a>
+    <% end %>
     <button type="button" onclick="closeModal()">Close</button>
   </div>
 </div>
+
+<div id="mediumModal">
+  <div id="mediumFilter">
+    <% Item.find_by_sql("SELECT DISTINCT medium FROM items ORDER BY medium").each do |medium| %>
+      <a href="/items/medium/<%= medium.medium %>"><%= medium.medium %></a>
+    <% end %>
+    <button type="button" onclick="closeModal()">Close</button>
+  </div>
+</div>
+
 <div id="sizeModal">
   <div id="sizeFilter">
-    <p>tbd</p>
+    <% Item.find_by_sql("SELECT DISTINCT size FROM items").each do |size| %>
+      <a href="/items/size/<%= size.size %>"><%= size.size %></a>
+    <% end %>
     <button type="button" onclick="closeModal()">Close</button>
   </div>
 </div>
