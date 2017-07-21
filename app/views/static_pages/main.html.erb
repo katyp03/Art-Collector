@@ -3,6 +3,7 @@
     <% Item.find_by_sql("SELECT DISTINCT style FROM items ORDER BY style").each do |style| %>
       <a href="/items/style/<%= style.style %>"><%= style.style %></a>
     <% end %>
+    <br>
     <button type="button" onclick="closeModal()">Close</button>
   </div>
 </div>
@@ -12,6 +13,7 @@
     <% Item.find_by_sql("SELECT DISTINCT yoc FROM items ORDER BY yoc").each do |date| %>
       <a href="/items/date/<%= date.yoc %>"><%= date.yoc %></a>
     <% end %>
+    <br>
     <button type="button" onclick="closeModal()">Close</button>
   </div>
 </div>
@@ -21,6 +23,7 @@
     <% Item.find_by_sql("SELECT DISTINCT medium FROM items ORDER BY medium").each do |medium| %>
       <a href="/items/medium/<%= medium.medium %>"><%= medium.medium %></a>
     <% end %>
+    <br>
     <button type="button" onclick="closeModal()">Close</button>
   </div>
 </div>
@@ -30,6 +33,7 @@
     <% Item.find_by_sql("SELECT DISTINCT size FROM items").each do |size| %>
       <a href="/items/size/<%= size.size %>"><%= size.size %></a>
     <% end %>
+    <br>
     <button type="button" onclick="closeModal()">Close</button>
   </div>
 </div>

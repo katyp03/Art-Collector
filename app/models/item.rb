@@ -1,5 +1,5 @@
 class Item < ApplicationRecord
-  enum size: [:small, :medium, :large]
+  enum size: [:Small, :Medium, :Large]
   belongs_to :artist
   has_many :appraisals
   has_many :sale_items
