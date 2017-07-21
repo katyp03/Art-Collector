@@ -43,6 +43,8 @@
 
 <button id="moreInfoButton" class="hideInfoButton" type="button">More Info</button><br /><br />
 
+<button id="appraisalButton" type="button">See Last Appraisal</button><br /><br />
+
 <% if current_user && current_user.admin == true %>
   <%= link_to 'Edit', edit_item_path(@item) %> |
   <%= link_to 'Back To Gallery', items_path %>
