@@ -75,3 +75,9 @@ body form input[type=email], body form input[type=password], body form input[typ
 h2 {
 	text-align: center;
 }
+
+footer {
+	height: 50px;
+	border-top: 2px solid black;
+	margin-top: 10px;
+}
