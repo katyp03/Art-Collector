@@ -7,12 +7,12 @@ Artist.create([
 ])
 
 Item.create([
-	{id: 1, artist_id: 1, medium: 'oil', title: 'Landscape at Collioure', style: 'Expressionism', size: 0, yoc: 1905, origin_country: 'France', picture: File.new("#{Rails.root}/app/assets/images/Landscape-at-Collioure.jpg")},
-	{id: 2, artist_id: 2, medium: 'other', title: 'Flowers, 11.72', style: 'Pop Art', size: 0, yoc: 1970, origin_country: 'USA', picture: File.new("#{Rails.root}/app/assets/images/Warhol-Flowers.jpg")},
-	{id: 3, artist_id: 3, medium: 'oil', title: 'Wheat Field with Cypress', style: 'Other', size: 1, yoc: 1889, origin_country: 'Netherlands', picture: File.new("#{Rails.root}/app/assets/images/Wheat-Field-with-Cypresses.jpg")},
-	{id: 4, artist_id: 2, medium: 'photographic print', title: 'Muhammad Ali', style: 'Pop Art', size: 0, yoc: 1977, origin_country: 'USA', picture: File.new("#{Rails.root}/app/assets/images/Muhammed-Ali.jpg")},
-	{id: 5, artist_id: 4, medium: 'oil', title: 'Andromache Mourning Hector', style: 'Neoclassical', size: 2, yoc: 1783, origin_country: 'France', picture: File.new("#{Rails.root}/app/assets/images/Andromache_Mourning_Hector.jpg")},
-	{id: 6, artist_id: 5, medium: 'pen and ink', title: 'Fly Through the Wind 6', style: 'PostModernism', size: 0, yoc: 2013, origin_country: 'Singapore', picture: File.new("#{Rails.root}/app/assets/images/Fly-Through-The-Wind.jpg")}
+	{id: 1, artist_id: 1, medium: 'oil', title: 'Landscape at Collioure', style: 'Expressionism', size: 0, yoc: 1905, origin_country: 'France', status: 0, picture: File.new("#{Rails.root}/app/assets/images/Landscape-at-Collioure.jpg")},
+	{id: 2, artist_id: 2, medium: 'other', title: 'Flowers, 11.72', style: 'Pop Art', size: 0, yoc: 1970, origin_country: 'USA', status: 0, picture: File.new("#{Rails.root}/app/assets/images/Warhol-Flowers.jpg")},
+	{id: 3, artist_id: 3, medium: 'oil', title: 'Wheat Field with Cypress', style: 'Other', size: 1, yoc: 1889, origin_country: 'Netherlands', status: 0, picture: File.new("#{Rails.root}/app/assets/images/Wheat-Field-with-Cypresses.jpg")},
+	{id: 4, artist_id: 2, medium: 'photographic print', title: 'Muhammad Ali', style: 'Pop Art', size: 0, yoc: 1977, origin_country: 'USA', status: 0, picture: File.new("#{Rails.root}/app/assets/images/Muhammed-Ali.jpg")},
+	{id: 5, artist_id: 4, medium: 'oil', title: 'Andromache Mourning Hector', style: 'Neoclassical', size: 2, yoc: 1783, origin_country: 'France', status: 1, picture: File.new("#{Rails.root}/app/assets/images/Andromache_Mourning_Hector.jpg")},
+	{id: 6, artist_id: 5, medium: 'pen and ink', title: 'Fly Through the Wind 6', style: 'PostModernism', size: 0, yoc: 2013, origin_country: 'Singapore', status: 1, picture: File.new("#{Rails.root}/app/assets/images/Fly-Through-The-Wind.jpg")}
 ])
 
 Appraisal.create([
