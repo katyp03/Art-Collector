@@ -42,6 +42,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :status %>
+    <%= form.number_field :status, id: :item_status %>
+  </div>
+
+  <div class="field">
     <%= form.label :yoc %>
     <%= form.number_field :yoc, id: :item_yoc %>
   </div>

@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 20170720143459) do
     t.string "address"
     t.integer "payment_amount"
     t.integer "lease_duration"
+    t.string "phone_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_sales_on_user_id"

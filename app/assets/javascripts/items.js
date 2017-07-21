@@ -14,13 +14,3 @@ document.addEventListener("turbolinks:load", function(){
 		});
 	}
 })
-
-// OR:
-
-// document.addEventListener("DOMContentLoaded", function(){
-// 	var infoButton = document.getElementById('moreInfoButton');
-// 	infoButton.addEventListener("click", function(){
-// 		document.querySelectorAll(".moreInfo").forEach(element => element.style.display="block");
-// 		document.querySelectorAll(".hideInfoButton").forEach(element => element.style.display="none");
-// 	});
-// })
