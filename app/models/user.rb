@@ -4,4 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :sales
+  def full_name
+    "#{fname} #{lname}".strip
+  end
 end
