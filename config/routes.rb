@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   get '/items/size/:size' => 'home#size_search'
 
+  post '/sales/add_cart/:id' => 'sales#add_cart', as: 'cart'
+
   resources :appraisals
   resources :items
   devise_for :users

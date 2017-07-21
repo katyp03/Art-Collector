@@ -1,4 +1,7 @@
 <div id="newSaleDiv">
 	<h1>Complete Your Purchase</h1>
 		<%= render 'form', sale: Sale.new(user_id: current_user.id) %>
+		<% session[:cart].each_line do |id| %>
+			<%= id %>
+		<% end %>
 </div>
