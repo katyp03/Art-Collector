@@ -7,6 +7,13 @@ Rails.application.routes.draw do
 
   get '/signin' => 'home#index'
 
+  get '/items/date/:date' => 'home#date_search'
+
+  get '/items/style/:style' => 'home#style_search'
+
+  get '/items/medium/:medium' => 'home#medium_search'
+
+  get '/items/size/:size' => 'home#size_search'
 
   resources :appraisals
   resources :items
