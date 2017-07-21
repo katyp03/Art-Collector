@@ -45,6 +45,14 @@
 
 <button id="appraisalButton" type="button">See Last Appraisal</button><br /><br />
 
+<div class="modalBody">
+  <div class="appraisalModal">
+    <%= @item.appraisals[0].previous_owner %>
+    <%= @item.appraisals[0].value %>
+    <%= @item.appraisals[0].condition %>
+  </div>
+</div>
+
 <% if current_user && current_user.admin == true %>
   <%= link_to 'Edit', edit_item_path(@item) %> |
   <%= link_to 'Back To Gallery', items_path %>
