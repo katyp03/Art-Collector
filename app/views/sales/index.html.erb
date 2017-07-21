@@ -1,14 +1,17 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Edit User Info - <%= current_user.full_name if current_user %></h1>
-<%= render 'edit' %>
-
-<h1>Sales - <%= current_user.full_name if current_user %></h1>
-
-<% @sales.each do |sale| %>
-    <% sale.items.each do |item| %>
-      <%= item.title  if current_user && current_user.id == sale.user_id  %>
-      <br>
-    <% end %>
-  </tr>
-<% end %>
+<div id="accountPage">
+	<h1><%= current_user.full_name if current_user %></h1>
+		<button id="editUserButton" class="hideEditButton" type="button">Edit Account Info</button><br />
+			<div id="editUserDiv" class="hiddenForm">
+				<h1>Edit Account Info</h1>
+				<%= render 'edit' %>
+			</div>
+</div>
+<div id="saleIndexDiv">
+	<h1>Previously Leased Items</h1>
+		<% @sales.each do |sale| %>
+    		<% sale.items.each do |item| %>
+      			<%= item.title  if current_user && current_user.id == sale.user_id  %><br />
+    		<% end %>
+  		</tr>
+		<% end %>
+</div>

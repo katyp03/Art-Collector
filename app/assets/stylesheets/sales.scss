@@ -4,3 +4,29 @@
 	text-align: center;
 }
 // end of new sale (checkout) page
+
+// sale index page (account page/edit user info page):
+#accountPage {
+	text-align: center;
+	margin: 0 auto;
+
+	.hideEditButton {
+		display: block;
+		margin: 0 auto;
+	}
+
+	.hiddenForm {
+		border: 1px solid #bfbfbf;
+		border-radius: 20px;
+		width: 500px;
+		padding: 30px;
+		margin: 0 auto;
+		display: none;
+	}
+}
+
+#saleIndexDiv {
+	text-align: center;
+	margin: 0 auto;
+}
+// end of sale index page

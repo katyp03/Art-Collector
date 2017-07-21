@@ -36,11 +36,11 @@ User.create([
 ])
 
 Sale.create([
-	{id: 1, user_id: 1, address: 'Boston', payment_amount: 1200, lease_duration: 3},
-	{id: 2, user_id: 2, address: 'New York', payment_amount: 15000, lease_duration: 3},
-	{id: 3, user_id: 3, address: 'London', payment_amount: 10000, lease_duration: 1},
-	{id: 4, user_id: 4, address: 'Philadelphia', payment_amount: 500, lease_duration: 3},
-	{id: 5, user_id: 5, address: 'New York', payment_amount: 1500000, lease_duration: 3}
+	{id: 1, user_id: 1, address: 'Boston', payment_amount: 1200, lease_duration: 3, phone_number: "2015553789"},
+	{id: 2, user_id: 2, address: 'New York', payment_amount: 15000, lease_duration: 3, phone_number: "4295558302"},
+	{id: 3, user_id: 3, address: 'London', payment_amount: 10000, lease_duration: 1, phone_number: "5395553026"},
+	{id: 4, user_id: 4, address: 'Philadelphia', payment_amount: 500, lease_duration: 3, phone_number: "6485551992"},
+	{id: 5, user_id: 5, address: 'New York', payment_amount: 1500000, lease_duration: 3, phone_number: "4285557231"}
 ])
 
 SaleItem.create([
