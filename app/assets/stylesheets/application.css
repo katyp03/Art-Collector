@@ -16,24 +16,34 @@
 
 /*for carousel:*/
 #myCarousel {
+	width: 70%;
 	height: 65vh;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin: 0 auto;
 	margin-top: 20px;
 }
 
- #myCarousel .carousel-inner {
+ div#myCarousel div.carousel-inner {
  	width: 80%;
  	height: 100%;
+ 	margin-left: 0px;
+	margin-right: 0px;
  	margin: 0 auto;
  }
 
  #myCarousel .item {
  	width: 80%;
  	height: 100%;
+ 	margin-left: 0px;
+	margin-right: 0px;
  	margin: 0 auto;
  }
 
  .item img {
  	max-height: 100%;
+ 	margin-left: 0px;
+	margin-right: 0px;
  }
 /*end of carousel*/
 
