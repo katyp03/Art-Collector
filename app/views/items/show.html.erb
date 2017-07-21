@@ -1,49 +1,52 @@
-<p id="notice"><%= notice %></p>
+<div id="picturePage">
+
+<div id="itemPicture">
+  <p>
+    <%= image_tag @item.picture.url %>
+  </p>
+</div>
 
 <p>
-  <strong>Id:</strong>
-  <%= @item.id %>
-</p>
-
-<p>
-  <strong>Artist:</strong>
-  <%= @item.artist_id %>
-</p>
-
-<p>
-  <strong>Title:</strong>
+  <strong>Title:</strong><br />
   <%= @item.title %>
 </p>
 
 <p>
-  <strong>Medium:</strong>
-  <%= @item.medium %>
+  <strong>Artist:</strong><br />
+  <%= @item.artist.full_name %>
 </p>
 
-<p>
-  <strong>Style:</strong>
-  <%= @item.style %>
-</p>
-
-<p>
-  <strong>Size:</strong>
-  <%= @item.size %>
-</p>
-
-<p>
-  <strong>Year Of Creation:</strong>
+<p class="moreInfo">
+  <strong>Year Of Creation:</strong><br />
   <%= @item.yoc %>
 </p>
 
-<p>
-  <strong>Origin Country:</strong>
+<p class="moreInfo">
+  <strong>Origin Country:</strong><br />
   <%= @item.origin_country %>
 </p>
 
-<p>
-  <strong>Picture:</strong>
-  <%= image_tag @item.picture.url %>
+<p class="moreInfo">
+  <strong>Style:</strong><br />
+  <%= @item.style %>
 </p>
 
-<%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', items_path %>
+<p class="moreInfo">
+  <strong>Medium:</strong><br />
+  <%= @item.medium %>
+</p>
+
+<p class="moreInfo">
+  <strong>Size:</strong><br />
+  <%= @item.size %>
+</p>
+
+<button id="moreInfoButton" class="hideInfoButton" type="button">More Info</button><br /><br />
+
+<% if current_user && current_user.admin == true %>
+  <%= link_to 'Edit', edit_item_path(@item) %> |
+  <%= link_to 'Back To Gallery', items_path %>
+<% else %>
+  <%= link_to 'Back To Gallery', items_path %>
+<% end %>
+</div>

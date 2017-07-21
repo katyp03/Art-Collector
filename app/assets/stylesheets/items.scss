@@ -1,6 +1,7 @@
+// gallery page (item index):
 #gallery {
 
-	width: 90%;
+	width: 100%;
 	text-align: center;
 	margin: 0 auto;
 	display: inline-block;
@@ -37,3 +38,20 @@
     	}
 	}
 }
+// end of gallery page
+
+// picture page (item show):
+#picturePage {
+	width: 90%;
+	text-align: center;
+	margin: 0 auto;
+
+	div#itemPicture img {
+		height: 425px;
+	}
+
+	p.moreInfo {
+		display: none;
+	}
+}
+// end of picture page
