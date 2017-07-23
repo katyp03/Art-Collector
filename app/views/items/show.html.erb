@@ -44,7 +44,7 @@
 <button id="moreInfoButton" class="hideInfoButton" type="button">More Info</button><br /><br />
 
 <button id="appraisalButton" type="button" onclick="showAppModal()">See Last Appraisal</button><br /><br />
-<% if @item.status == 0 %>
+<% if @item.status == "Available" %>
   <%= link_to 'Add to Cart', cart_path(@item), method: :post %>
 <% else %>
   <h4>Sorry, this item is currently on lease.</h4>

@@ -64,7 +64,7 @@ class SalesController < ApplicationController
 
   def add_cart
     if session[:cart].nil?
-      session[:cart] = params[:id]
+      session[:cart] = [params[:id]]
     else
       session[:cart].push(:id)
     end
@@ -81,6 +81,7 @@ class SalesController < ApplicationController
     def sale_params
       params.require(:sale).permit(:user_id, :address, :payment_amount, :lease_duration, :item_id)
     end
+
     def login_check
       if user_signed_in?
 
