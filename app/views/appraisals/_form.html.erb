@@ -33,14 +33,14 @@
 
   <div class="field">
     <%= form.label :Condition %><br />
-    <%= radio_button_tag(:condition, 0) %>
-    <%= label_tag(:age_child, "Mint") %>
-    <%= radio_button_tag(:condition, 1) %>
-    <%= label_tag(:age_adult, "Good") %>
-    <%= radio_button_tag(:condition, 2) %>
-    <%= label_tag(:age_adult, "Average") %>
-    <%= radio_button_tag(:condition, 3) %>
-    <%= label_tag(:age_adult, "Damaged") %>
+    <%= form.radio_button(:condition, 0) %>
+    <%= label_tag(:condition, "Mint") %>
+    <%= form.radio_button(:condition, 1) %>
+    <%= label_tag(:condition, "Good") %>
+    <%= form.radio_button(:condition, 2) %>
+    <%= label_tag(:condition, "Average") %>
+    <%= form.radio_button(:condition, 3) %>
+    <%= label_tag(:condition, "Damaged") %>
   </div><br />
 
   <div class="actions">
