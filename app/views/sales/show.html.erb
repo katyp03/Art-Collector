@@ -1,29 +1,27 @@
-<p id="notice"><%= notice %></p>
+<div id="saleShowDiv">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>User:</strong>
-  <%= @sale.user_id %>
-</p>
+  <p>
+    <strong>User:</strong>
+    <%= @sale.user.full_name %>
+  </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @sale.address %>
-</p>
+  <p>
+    <strong>Address:</strong>
+    <%= @sale.address %>
+  </p>
 
-<p>
-  <strong>Payment amount:</strong>
-  <%= @sale.payment_amount %>
-</p>
+ <!--  <p>
+    <strong>Payment amount:</strong>
+    <%# @sale.payment_amount %>
+  </p> -->
 
-<p>
-  <strong>Lease duration:</strong>
-  <%= @sale.lease_duration %>
-</p>
+  <p>
+    <strong>Lease duration:</strong>
+    <%= @sale.lease_duration %> Months
+  </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @sale.user.full_name %>
-</p>
+  <p>Thank you for shopping with us!</p>
 
-<%= link_to 'Edit', edit_sale_path(@sale) %> |
-<%= link_to 'Back', sales_path %>
+  <%= link_to 'Account Page', '/sales' %>
+</div>

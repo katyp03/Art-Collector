@@ -25,7 +25,6 @@ class AppraisalsController < ApplicationController
   # POST /appraisals.json
   def create
     @appraisal = Appraisal.new(appraisal_params)
-
     respond_to do |format|
       if @appraisal.save
         format.html { redirect_to @appraisal, notice: 'Appraisal was successfully created.' }
@@ -40,9 +39,10 @@ class AppraisalsController < ApplicationController
   # PATCH/PUT /appraisals/1
   # PATCH/PUT /appraisals/1.json
   def update
-    respond_to do |format|
-      if @appraisal.update(appraisal_params)
-        format.html { redirect_to @appraisal, notice: 'Appraisal was successfully updated.' }
+    params[:appraisal][:condition] = params[:appraisal][:condition].to_i
+        respond_to do |format|
+      if @appraisal.update_attributes(appraisal_params)
+        format.html { redirect_to @appraisal.item }
         format.json { render :show, status: :ok, location: @appraisal }
       else
         format.html { render :edit }

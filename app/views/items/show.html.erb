@@ -53,11 +53,11 @@
 <div id="modalBody">
   <div id="appraisalModal">
     <% if @item.appraisals.any? %>
-      Previous Owner: <%= @item.appraisals[0].previous_owner %>
+      Previous Owner: <%= @item.appraisals.last.previous_owner %>
       <br>
-      Value: $<%= @item.appraisals[0].value %>
+      Value: $<%= @item.appraisals.last.value %>
       <br>
-      Condition: <%= @item.appraisals[0].condition %>
+      Condition: <%= @item.appraisals.last.condition %>
       <br>
       <%= link_to "Edit Appraisal", edit_appraisal_path if current_user && current_user.admin == true %>
     <% else %>
