@@ -11,17 +11,21 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :id %>
-    <%= form.number_field :id, id: :item_id %>
-  </div>
+  <!-- <div class="field">
+    <%# form.label :id %>
+    <%# form.number_field :id, id: :item_id %>
+  </div> -->
 
   <div class="field">
     <%= form.text_field :title, id: :item_title, placeholder: 'Title' %>
   </div>
 
   <div class="field">
-    <%= form.number_field :artist_full_name, id: :item_artist_full_name, placeholder: 'Artist Name' %>
+    <%= form.text_field :artist_fname, id: :item_artist_fname, placeholder: 'Artist First Name' %>
+  </div>
+
+  <div class="field">
+    <%= form.text_field :artist_lname, id: :item_artist_lname, placeholder: 'Artist Last Name' %>
   </div>
 
   <div class="field">
@@ -36,9 +40,9 @@
     <%= form.number_field :size, id: :item_size, placeholder: 'Size' %>
   </div>
 
-  <div class="field">
-    <%= form.number_field :status, id: :item_status, placeholder: 'Status (available or leased)' %>
-  </div>
+  <!-- <div class="field">
+    <%# form.number_field :status, id: :item_status, placeholder: 'Status (available or leased)' %>
+  </div> -->
 
   <div class="field">
     <%= form.number_field :yoc, id: :item_yoc, placeholder: 'Year of Creation' %>

@@ -8,7 +8,7 @@ class CreateItems < ActiveRecord::Migration[5.1]
       t.integer :size
       t.integer :yoc
       t.string :origin_country
-      t.integer :status
+      t.integer :status, default: 0
       t.belongs_to :artist, foreign_key: true
       t.attachment :picture
 
