@@ -59,6 +59,8 @@
     Condition: <%= @item.appraisals[0].condition %>
     <br>
     <button type="button" onclick="closeAppModal()">Close</button>
+    <br>
+    <%= link_to "Edit Appraisal", edit_appraisal_path if current_user && current_user.admin == true %>
   </div>
 </div>
 
