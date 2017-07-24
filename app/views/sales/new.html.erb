@@ -1,20 +1,23 @@
 <div id="newSaleDiv">
 	<h1>Complete Your Purchase</h1>
-		<u><h3>In Cart:</h3></u>
+		<h3>In Cart:</h3>
+		<div id="cartDiv">
 		<% if (session[:cart]||[]).length > 0 %>
 			<% session[:cart].each do |id| %>
 				<% ids = id.to_i %>
-				<ul class="saleThumbs">
-      					<li class="galleryPic" style="background-image:url(<%= Item.find(ids).picture %>)">
-      					<span class="galleryPicTitle"><%= Item.find(ids).title %></span><br />
-      					<span class="galleryPicArtist"><%= Item.find(ids).artist.full_name %></span></li>
+				<span class="saleThumbs">
+      					<li class="salePic" style="background-image:url(<%= Item.find(ids).picture %>)">
+      					<span class="salePicTitle"><%= Item.find(ids).title %></span><br />
+      					<span class="salePicArtist"><%= Item.find(ids).artist.full_name %></span></li>
 
-   					</ul>
+   				</span>
 				<%# Item.find(ids).title %>
 				<br>
 			<% end %>
 			<span id="clearCartSpan">
-			<%= link_to "Clear Cart", delete_cart_path %></span>
+			<%= link_to "Clear Cart", delete_cart_path %></span><br /><br />
+		</div>
+			<h3>Your Purchasing Info:</h3>
 			<%= render 'form', sale: Sale.new(user_id: current_user.id) %>
 		<% else %>
 			<br /><h4>Add some items to your cart!</h4>

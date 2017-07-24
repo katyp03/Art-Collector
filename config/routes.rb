@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   get '/items/size/:size' => 'home#size_search'
 
+  get '/appraisals' => 'static_pages#main'
+
   post '/sales/add_cart/:id' => 'sales#add_cart', as: 'cart'
 
   patch 'items/:id/condition-upgrade' => 'items#upgrade', as: :item_upgrade

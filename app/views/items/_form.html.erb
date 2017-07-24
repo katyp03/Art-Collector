@@ -21,14 +21,17 @@
   </div>
 
   <div class="field">
+    <%= form.label :Artist %><br />
     <%= form.select :artist_id, options_for_select( Artist.all.map{|a| [a.full_name, a.id]}), id: :item_artist_id %>
   </div>
 
   <div class="field">
+    <%= form.label :Medium %><br />
     <%= form.select :medium, options_for_select( Item.all.map{|m| [m.medium]}) %>
   </div>
 
   <div class="field">
+    <%= form.label :Style %><br />
     <%= form.select :style, options_for_select( Item.all.map{|s| [s.style]}) %>
   </div>
 
@@ -39,11 +42,11 @@
   <div class="field">
     <%= form.label :Size %><br />
     <%= radio_button_tag(:size, 0) %>
-    <%= label_tag(:size, "Small") %>
+    <%= label_tag(:size, "Small: <36in") %><br />
     <%= radio_button_tag(:age, 1) %>
-    <%= label_tag(:size, "Medium") %>
+    <%= label_tag(:size, "Medium: 36-72in") %><br />
     <%= radio_button_tag(:age, 2) %>
-    <%= label_tag(:size, "Large") %>
+    <%= label_tag(:size, "Large: >72in") %>
   </div>
 
   <!-- <div class="field">

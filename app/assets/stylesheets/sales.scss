@@ -1,25 +1,56 @@
 // new sale page (checkout page):
-#newSaleDiv {
-	margin: 0 auto;
+div#newSaleDiv {
+	width: 100%;
 	text-align: center;
+	margin: 0 auto;
+	display: inline-block;
 
 	#clearCartSpan {
 		cursor: pointer;
 	}
+
+	span.saleThumbs {
+		list-style-type: none;
+		width: 88%;
+		margin: 0 auto;
+		display: inline-block;
+		margin-left: 0px;
+		font-size: 10px;
+
+		li.salePic {
+
+			background-size: cover;
+			width: 120px;
+			height: 120px;
+			display: inline-block;
+			margin: 0;
+			margin-bottom: 60px;
+
+			span.salePicTitle {
+
+				vertical-align: -130px;
+				width: 120px;
+				height: 20px;
+			}
+
+			span.salePicArtist {
+
+				vertical-align: -5px;
+				width: 120px;
+				height: 20px;
+			}
+    	}
+	}
 }
 
-div#newSaleDiv {
-
-	ul#saleThumbs {
-	width: 100%;
-
-		li.galleryPic {
-			width: 100px;
-			height: 100px;
-		}
-	}
-	// margin: 0 auto;
-	// display: inline-block;
+#cartDiv {
+		border: 1px solid #bfbfbf;
+		border-radius: 20px;
+		width: 500px;
+		padding: 30px;
+		margin: 0 auto;
+		display: inline-block;
+		margin-bottom: 20px;
 }
 // end of new sale (checkout) page
 
