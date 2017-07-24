@@ -37,6 +37,10 @@ div.body {
   width: 90%;
   margin: auto;
   z-index: 0;
+
+  h3 {
+    cursor: pointer;
+  }
 }
 
 div#styleModal {
@@ -166,6 +170,7 @@ div#dateModal {
     font-weight: 900;
     letter-spacing: 1px;
     transition: all 150ms linear;
+    cursor: pointer;
   }
 
   .button:hover {
@@ -175,5 +180,6 @@ div#dateModal {
     color: lighten(gray, 18%); 
     text-decoration: none;
     text-shadow: -1px -1px 0 darken(gray, 9.5%);
+    cursor: pointer;
     transition: all 250ms linear;
   }

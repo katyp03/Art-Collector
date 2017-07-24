@@ -1,7 +1,7 @@
 <div id="newSaleDiv">
 	<h1>Complete Your Purchase</h1>
 		<%= render 'form', sale: Sale.new(user_id: current_user.id) %>
-		<u><h3>Your Cart</h3></u>
+		<u><h3>In Cart:</h3></u>
 		<% session[:cart].each do |id| %>
 			<% ids = id.to_i %>
 			<%= Item.find(ids).title %>

@@ -49,11 +49,6 @@
 <button id="moreInfoButton" class="hideInfoButton" type="button">More Info</button><br /><br />
 
 <button id="appraisalButton" type="button" onclick="showAppModal()">See Last Appraisal</button><br /><br />
-<% if @item.status == "Available" %>
-  <%= link_to 'Add to Cart', cart_path(@item), method: :post %> |
-<% else %>
-  <h4>Sorry, this item is currently on lease.</h4>
-<% end %>
 
 <div id="modalBody">
   <div id="appraisalModal">
@@ -67,6 +62,13 @@
   </div>
 </div>
 
+<!-- add to cart if available: -->
+<% if @item.status == "Available" %>
+  <%= link_to 'Add to Cart', cart_path(@item), method: :post %>  |
+<% else %>
+  <h4>Sorry, this item is currently on lease.</h4>
+<% end %>
+<!-- edit picture if user is an admin: -->
 <% if current_user && current_user.admin == true %>
   <%= link_to 'Edit', edit_item_path(@item) %> |
   <%= link_to 'Back To Gallery', items_path %>
