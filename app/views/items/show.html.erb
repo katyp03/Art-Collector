@@ -52,15 +52,21 @@
 
 <div id="modalBody">
   <div id="appraisalModal">
-    Previous Owner: <%= @item.appraisals[0].previous_owner %>
-    <br>
-    Value: $<%= @item.appraisals[0].value %>
-    <br>
-    Condition: <%= @item.appraisals[0].condition %>
+    <% if @item.appraisals.any? %>
+      Previous Owner: <%= @item.appraisals[0].previous_owner %>
+      <br>
+      Value: $<%= @item.appraisals[0].value %>
+      <br>
+      Condition: <%= @item.appraisals[0].condition %>
+      <br>
+      <%= link_to "Edit Appraisal", edit_appraisal_path if current_user && current_user.admin == true %>
+    <% else %>
+      Item does not have an appraisal right now.
+      <%= link_to "Add Appraisal", new_appraisal_path if current_user && current_user.admin == true %>
+      <br>
+    <% end %>
     <br>
     <button type="button" onclick="closeAppModal()">Close</button>
-    <br>
-    <%= link_to "Edit Appraisal", edit_appraisal_path if current_user && current_user.admin == true %>
   </div>
 </div>
 
