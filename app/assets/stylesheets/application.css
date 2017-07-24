@@ -48,7 +48,7 @@
 /*end of carousel*/
 
 /*for all forms:*/
-body form input[type=email], body form input[type=password], body form input[type=text], body form input[type=number] {
+body form input[type=email], body form input[type=password], body form input[type=text], body form input[type=number], body form input[type=file] {
 	background: transparent;
 	border: none;
 	border-bottom: 1px solid #737373;
@@ -87,6 +87,8 @@ h2 {
 }
 
 footer {
+	width: 100%;
+	bottom: 0;
 	height: 50px;
 	border-top: 2px solid black;
 	margin-top: 10px;
