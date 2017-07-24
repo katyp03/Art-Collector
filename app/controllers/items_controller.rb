@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy, :upgrade, :downgrade]
+  before_action :login_check, except: [:index]
 
   # GET /items
   # GET /items.json
@@ -96,5 +97,13 @@ class ItemsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
       params.require(:item).permit(:id, :artist_id, :title, :medium, :style, :size, :yoc, :origin_country, :picture)
+    end
+
+    def login_check
+      if user_signed_in?
+
+      else
+        redirect_to signin_path
+      end
     end
 end
