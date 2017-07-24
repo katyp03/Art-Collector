@@ -1,9 +1,12 @@
 <div id="newSaleDiv">
 	<h1>Complete Your Purchase</h1>
 		<%= render 'form', sale: Sale.new(user_id: current_user.id) %>
-		<h3>In Cart:</h3>
-		<% session[:cart].each do |id| %>
-			<% ids = id.to_i %>
-			<%= Item.find(ids).title %>
+		<u><h3>In Cart:</h3></u>
+		<% if (session[:cart]||[]).length > 0 %>
+			<% session[:cart].each do |id| %>
+				<% ids = id.to_i %>
+				<%= Item.find(ids).title %>
+				<br>
+			<% end %>
 		<% end %>
 </div>

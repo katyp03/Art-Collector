@@ -66,7 +66,7 @@ class SalesController < ApplicationController
     if session[:cart].nil?
       session[:cart] = [params[:id]]
     else
-      session[:cart].push(:id)
+      session[:cart].push(params[:id])
     end
     redirect_back(fallback_location: root_path)
   end

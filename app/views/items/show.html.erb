@@ -38,7 +38,7 @@
 
 <p class="moreInfo">
   <strong>Status:</strong><br />
-  <span class="artwork-status"><%= @item.status %></span> <%= link_to "-", item_downgrade_path(@item), method: :patch, remote: true, class: "artwork-status-change" %> <%= link_to "+", item_upgrade_path(@item), method: :patch, remote: true, class: "artwork-status-change" %>
+  <%= link_to "- ", item_downgrade_path(@item), method: :patch, remote: true, class: "artwork-status-change" if current_user && current_user.admin == true %><span class="artwork-status"><%= @item.status %></span> <%= link_to "+", item_upgrade_path(@item), method: :patch, remote: true, class: "artwork-status-change" if current_user && current_user.admin == true %>
 </p>
 
 <p class="moreInfo">
@@ -59,12 +59,14 @@
     Condition: <%= @item.appraisals[0].condition %>
     <br>
     <button type="button" onclick="closeAppModal()">Close</button>
+    <br>
+    <%= link_to "Edit Appraisal", edit_appraisal_path if current_user && current_user.admin == true %>
   </div>
 </div>
 
 <!-- add to cart if available: -->
 <% if @item.status == "Available" %>
-  <%= link_to 'Add to Cart', cart_path(@item), method: :post %>  |  
+  <%= link_to 'Add to Cart', cart_path(@item), method: :post %>  |
 <% else %>
   <h4>Sorry, this item is currently on lease.</h4>
 <% end %>
