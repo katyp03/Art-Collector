@@ -3,7 +3,13 @@ Artist.create([
 	{id: 2, fname: 'Andy', lname: 'Warhol'},
 	{id: 3, fname: 'Vincent', lname: 'Van Gogh'},
 	{id: 4, fname: 'Jacque-Louis', lname: 'David'},
-	{id: 5, fname: 'Han Sai', lname: 'Por'}
+	{id: 5, fname: 'Han Sai', lname: 'Por'},
+	{id: 6, fname: 'Jasper', lname: 'Johns'},
+	{id: 7, fname: 'John-Michael', lname: 'Basquiat'},
+	{id: 8, fname: 'Paul', lname: 'Cezanne'},
+	{id: 9, fname: 'Georgia', lname: 'O\'Keefe'},
+	{id: 10, fname: 'Helen', lname: 'Frankenthaler'},
+	{id: 11, fname: 'Pablo', lname: 'Picasso'}
 ])
 
 Item.create([
