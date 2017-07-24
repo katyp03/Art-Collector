@@ -1,5 +1,6 @@
 class AppraisalsController < ApplicationController
   before_action :set_appraisal, only: [:show, :edit, :update, :destroy]
+  before_action :login_check
 
   # GET /appraisals
   # GET /appraisals.json
@@ -70,5 +71,13 @@ class AppraisalsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def appraisal_params
       params.require(:appraisal).permit(:id, :item_id, :previous_owner, :value, :condition)
+    end
+
+    def login_check
+      if user_signed_in?
+
+      else
+        redirect_to signin_path
+      end
     end
 end

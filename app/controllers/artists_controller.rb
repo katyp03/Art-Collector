@@ -1,5 +1,6 @@
 class ArtistsController < ApplicationController
   before_action :set_artist, only: [:show, :edit, :update, :destroy]
+  before_action :login_check
 
   # GET /artists
   # GET /artists.json
@@ -70,5 +71,12 @@ class ArtistsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def artist_params
       params.require(:artist).permit(:fname, :lname)
+    end
+
+    def login_check
+      if user_signed_in?
+      else
+        redirect_to signin_path
+      end
     end
 end

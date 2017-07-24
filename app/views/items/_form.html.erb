@@ -25,11 +25,11 @@
   </div>
 
   <div class="field">
-    <%= form.text_field :medium, id: :item_medium, placeholder: 'Medium' %>
+    <%= form.select :medium, options_for_select( Item.all.map{|m| [m.medium]}) %>
   </div>
 
   <div class="field">
-    <%= form.text_field :style, id: :item_style, placeholder: 'Style' %>
+    <%= form.select :style, options_for_select( Item.all.map{|s| [s.style]}) %>
   </div>
 
   <!-- <div class="field">

@@ -62,6 +62,7 @@
       <%= link_to "Edit Appraisal", edit_appraisal_path if current_user && current_user.admin == true %>
     <% else %>
       Item does not have an appraisal right now.
+      <br>
       <%= link_to "Add Appraisal", new_appraisal_path if current_user && current_user.admin == true %>
       <br>
     <% end %>
