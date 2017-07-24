@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :set_item, only: [:show, :edit, :update, :destroy, :upgrade, :downgradeß]
 
   # GET /items
   # GET /items.json
@@ -46,6 +46,32 @@ class ItemsController < ApplicationController
         format.json { render :show, status: :ok, location: @item }
       else
         format.html { render :edit }
+        format.json { render json: @item.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # upgrade the item condition
+  def upgrade
+    # to do: cap at max status
+    @item.status = (Item.statuses[@item.status]||0) + 1
+    respond_to do |format|
+      if @item.save
+        format.json { render :show, status: :ok, location: @item }
+      else
+        format.json { render json: @item.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # downgrade the item condition
+  def downgrade
+    # to do: cap at min status
+    @item.status = (Item.statuses[@item.status]||0) - 1
+    respond_to do |format|
+      if @item.save
+        format.json { render :show, status: :ok, location: @item }
+      else
         format.json { render json: @item.errors, status: :unprocessable_entity }
       end
     end

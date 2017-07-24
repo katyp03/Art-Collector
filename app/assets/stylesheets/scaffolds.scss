@@ -6,6 +6,8 @@ body {
   font-size: 13px;
   line-height: 18px;
   padding-bottom: 60px;
+  // background-image: url(/assets/canvas-background-ccs.jpg);
+  // background-repeat: none;
 }
 
 p, ol, ul, td {
@@ -19,8 +21,15 @@ p, ol, ul, td {
   font-size: 18px;
 }
 
-#logo {
-  float: left;
+
+
+.field {
+  font-family: "Nixie One";
+  font-size: 13px;
+  line-height: 18px;
+}
+#login{
+  text-align: center;
 }
 
 footer {
