@@ -25,10 +25,12 @@ class AppraisalsController < ApplicationController
   # POST /appraisals
   # POST /appraisals.json
   def create
+    params[:appraisal][:condition] = params[:appraisal][:condition].to_i
     @appraisal = Appraisal.new(appraisal_params)
+
     respond_to do |format|
       if @appraisal.save
-        format.html { redirect_to @appraisal, notice: 'Appraisal was successfully created.' }
+        format.html { redirect_to @appraisal.item }
         format.json { render :show, status: :created, location: @appraisal }
       else
         format.html { render :new }
@@ -57,7 +59,7 @@ class AppraisalsController < ApplicationController
   def destroy
     @appraisal.destroy
     respond_to do |format|
-      format.html { redirect_to appraisals_url, notice: 'Appraisal was successfully destroyed.' }
+      format.html { redirect_to appraisals_url }
       format.json { head :no_content }
     end
   end

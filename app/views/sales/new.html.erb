@@ -4,10 +4,19 @@
 		<% if (session[:cart]||[]).length > 0 %>
 			<% session[:cart].each do |id| %>
 				<% ids = id.to_i %>
-				<%= Item.find(ids).title %>
+				<ul class="saleThumbs">
+      					<li class="galleryPic" style="background-image:url(<%= Item.find(ids).picture %>)">
+      					<span class="galleryPicTitle"><%= Item.find(ids).title %></span><br />
+      					<span class="galleryPicArtist"><%= Item.find(ids).artist.full_name %></span></li>
+
+   					</ul>
+				<%# Item.find(ids).title %>
 				<br>
 			<% end %>
-			<%= link_to "Clear Cart", delete_cart_path %>
+			<span id="clearCartSpan">
+			<%= link_to "Clear Cart", delete_cart_path %></span>
+			<%= render 'form', sale: Sale.new(user_id: current_user.id) %>
+		<% else %>
+			<br /><h4>Add some items to your cart!</h4>
 		<% end %>
-		<%= render 'form', sale: Sale.new(user_id: current_user.id) %>
 </div>
