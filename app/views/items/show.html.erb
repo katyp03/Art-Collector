@@ -38,7 +38,7 @@
 
 <p class="moreInfo">
   <strong>Status:</strong><br />
-  <%= @item.status %>
+  <span class="artwork-status"><%= @item.status %></span> <%= link_to "-", item_downgrade_path(@item), method: :patch, remote: true, class: "artwork-status-change" %> <%= link_to "+", item_upgrade_path(@item), method: :patch, remote: true, class: "artwork-status-change" %>
 </p>
 
 <p class="moreInfo">

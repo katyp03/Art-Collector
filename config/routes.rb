@@ -17,6 +17,10 @@ Rails.application.routes.draw do
 
   post '/sales/add_cart/:id' => 'sales#add_cart', as: 'cart'
 
+  patch 'items/:id/condition-upgrade' => 'items#upgrade', as: :item_upgrade
+
+  patch 'items/:id/condition-downgrade' => 'items#downgrade', as: :item_downgrade
+
   resources :appraisals
   resources :items
   devise_for :users
