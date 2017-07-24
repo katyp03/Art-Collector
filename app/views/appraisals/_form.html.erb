@@ -9,37 +9,39 @@
       <% end %>
       </ul>
     </div>
-  <% end %>
+  <% end %><br />
+
+  <!-- <div class="field">
+    <%# form.label :id %>
+    <%# form.number_field :id, id: :appraisal_id %>
+  </div> -->
+
+  <!-- <div class="field">
+    <%# form.label :item_id %>
+    <%# form.number_field :item_id, id: :appraisal_item_id %>
+  </div> -->
 
   <div class="field">
-    <%= form.label :id %>
-    <%= form.number_field :id, id: :appraisal_id %>
-  </div>
+    <%= form.label :Previous_Owner %><br />
+    <%= form.text_field :previous_owner, id: :appraisal_previous_owner, placeholder: 'Previous Owner' %>
+  </div><br />
 
   <div class="field">
-    <%= form.label :item_id %>
-    <%= form.number_field :item_id, id: :appraisal_item_id %>
-  </div>
+    <%= form.label :Value %><br />
+    <%= form.number_field :value, id: :appraisal_value, placeholder: 'Item Value' %>
+  </div><br />
 
   <div class="field">
-    <%= form.label :previous_owner %>
-    <%= form.text_field :previous_owner, id: :appraisal_previous_owner %>
-  </div>
-
-  <div class="field">
-    <%= form.label :value %>
-    <%= form.number_field :value, id: :appraisal_value %>
-  </div>
-
-  <div class="field">
-    <%= form.label :condition %>
-    <%= form.number_field :condition, id: :appraisal_condition %>
-  </div>
-
-  <div class="field">
-    <%= form.label :item_id %>
-    <%= form.text_field :item_id, id: :appraisal_item_id %>
-  </div>
+    <%= form.label :Condition %><br />
+    <%= radio_button_tag(:condition, 0) %>
+    <%= label_tag(:age_child, "Mint") %>
+    <%= radio_button_tag(:condition, 1) %>
+    <%= label_tag(:age_adult, "Good") %>
+    <%= radio_button_tag(:condition, 2) %>
+    <%= label_tag(:age_adult, "Average") %>
+    <%= radio_button_tag(:condition, 3) %>
+    <%= label_tag(:age_adult, "Damaged") %>
+  </div><br />
 
   <div class="actions">
     <%= form.submit %>
