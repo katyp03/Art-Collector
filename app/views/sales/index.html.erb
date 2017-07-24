@@ -10,8 +10,10 @@
 	<h1>Previously Leased Items</h1>
 		<% @sales.each do |sale| %>
     		<% sale.items.each do |item| %>
-      			<%= item.title  if current_user && current_user.id == sale.user_id  %><br />
+					<% if current_user && current_user.id == sale.user_id %>
+      			<%= item.title %>
+						<br>
+					<% end %>
     		<% end %>
-  		</tr>
 		<% end %>
 </div>
