@@ -25,10 +25,15 @@ class SalesController < ApplicationController
   # POST /sales
   # POST /sales.json
   def create
-    @sale = Sale.new(sale_params)
-
+    Sale.transaction do
+      @sale = Sale.create(sale_params)
+      session[:cart].each do |item_id|
+        SaleItem.create(sale_id: @sale.id, item_id: item_id)
+      end if session[:cart]
+    end
+    session[:cart] = nil if @sale.id
     respond_to do |format|
-      if @sale.save
+      if @sale.id
         format.html { redirect_to @sale, notice: 'Sale was successfully created.' }
         format.json { render :show, status: :created, location: @sale }
       else
@@ -79,7 +84,7 @@ class SalesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sale_params
-      params.require(:sale).permit(:user_id, :address, :payment_amount, :lease_duration, :item_id)
+      params.require(:sale).permit(:user_id, :address, :payment_amount, :lease_duration, :item_id, :phone_number)
     end
 
     def login_check
