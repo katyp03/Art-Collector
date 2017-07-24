@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20170720143459) do
     t.integer "size"
     t.integer "yoc"
     t.string "origin_country"
-    t.integer "status"
+    t.integer "status", default: 0
     t.string "picture_file_name"
     t.string "picture_content_type"
     t.integer "picture_file_size"
