@@ -17,43 +17,35 @@
   </div>
 
   <div class="field">
-    <%= form.label :artist_id %>
-    <%= form.number_field :artist_id, id: :item_artist_id %>
+    <%= form.text_field :title, id: :item_title, placeholder: 'Title' %>
   </div>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :item_title %>
+    <%= form.number_field :artist_full_name, id: :item_artist_full_name, placeholder: 'Artist Name' %>
   </div>
 
   <div class="field">
-    <%= form.label :medium %>
-    <%= form.text_field :medium, id: :item_medium %>
+    <%= form.text_field :medium, id: :item_medium, placeholder: 'Medium' %>
   </div>
 
   <div class="field">
-    <%= form.label :style %>
-    <%= form.text_field :style, id: :item_style %>
+    <%= form.text_field :style, id: :item_style, placeholder: 'Style' %>
   </div>
 
   <div class="field">
-    <%= form.label :size %>
-    <%= form.number_field :size, id: :item_size %>
+    <%= form.number_field :size, id: :item_size, placeholder: 'Size' %>
   </div>
 
   <div class="field">
-    <%= form.label :status %>
-    <%= form.number_field :status, id: :item_status %>
+    <%= form.number_field :status, id: :item_status, placeholder: 'Status (available or leased)' %>
   </div>
 
   <div class="field">
-    <%= form.label :yoc %>
-    <%= form.number_field :yoc, id: :item_yoc %>
+    <%= form.number_field :yoc, id: :item_yoc, placeholder: 'Year of Creation' %>
   </div>
 
   <div class="field">
-    <%= form.label :origin_country %>
-    <%= form.text_field :origin_country, id: :item_origin_country %>
+    <%= form.text_field :origin_country, id: :item_origin_country, placeholder: 'Country of Origin' %>
   </div>
 
   <div class="field">

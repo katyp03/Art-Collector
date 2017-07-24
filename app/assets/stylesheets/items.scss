@@ -76,3 +76,17 @@ div#modalBody {
   width: 80%; /* Could be more or less, depending on screen size */
 }
 // end of picture page
+
+// add new picture page (admin page, item new):
+#newItemDiv {
+	text-align: center;
+	margin: 0 auto;
+}
+// end of new picture page
+
+// edit picture page:
+#editItemDiv {
+	text-align: center;
+	margin: 0 auto;
+}
+// end of edit picture page
