@@ -20,6 +20,9 @@
     <%# form.label :item_id %>
     <%# form.number_field :item_id, id: :appraisal_item_id %>
   </div> -->
+  <div class="field">
+    <%= form.select :item_id, options_for_select( Item.all.map{|t| [t.title, t.id]}), id: :appraisal_item_id %>
+  </div>
 
   <div class="field">
     <%= form.label :Previous_Owner %><br />
