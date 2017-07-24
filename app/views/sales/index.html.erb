@@ -11,7 +11,13 @@
 		<% @sales.each do |sale| %>
     		<% sale.items.each do |item| %>
 					<% if current_user && current_user.id == sale.user_id %>
-      			<%= item.title %>
+					<ul>
+					<a href="/items/<%= item.id %>">
+      					<li class="galleryPic" style="background-image:url(<%= Item.find(item.id).picture %>)">
+      					<span class="galleryPicTitle"><%= item.title %></span><br />
+      					<span class="galleryPicArtist"><%= item.artist.full_name %></span></li>
+   					</a>
+   					</ul>
 						<br>
 					<% end %>
     		<% end %>
