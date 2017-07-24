@@ -29,6 +29,9 @@ class SalesController < ApplicationController
       @sale = Sale.create(sale_params)
       session[:cart].each do |item_id|
         SaleItem.create(sale_id: @sale.id, item_id: item_id)
+        item = Item.find(item_id)
+        item.status = 1
+        item.save
       end if session[:cart]
     end
     session[:cart] = nil if @sale.id
