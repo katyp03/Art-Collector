@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'clear_cart' => 'sales#clear_cart', as: 'delete_cart'
   resources :sales
   resources :artists
   get '/admin' => 'items#new'
@@ -20,6 +21,8 @@ Rails.application.routes.draw do
   patch 'items/:id/condition-upgrade' => 'items#upgrade', as: :item_upgrade
 
   patch 'items/:id/condition-downgrade' => 'items#downgrade', as: :item_downgrade
+
+
 
   resources :appraisals
   resources :items

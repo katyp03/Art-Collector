@@ -30,6 +30,9 @@
           <% end %>
         </div>
         <a id="cart" href="/sales/new"><img style="width: 50px;" src="https://openclipart.org/image/2400px/svg_to_png/60139/cart.png"></a>
+        <% if session[:cart] %>
+          <h4 id="cartAmount"><%= session[:cart].length %></h4>
+        <% end %>
       </div>
         <% if user_signed_in? %>
         <div class="row">

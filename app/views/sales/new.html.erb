@@ -7,6 +7,7 @@
 				<%= Item.find(ids).title %>
 				<br>
 			<% end %>
+			<%= link_to "Clear Cart", delete_cart_path %>
 		<% end %>
 		<%= render 'form', sale: Sale.new(user_id: current_user.id) %>
 </div>

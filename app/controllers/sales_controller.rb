@@ -75,10 +75,15 @@ class SalesController < ApplicationController
       session[:cart] = [params[:id]]
     else
       session[:cart].push(params[:id])
+      session[:cart].uniq!
     end
     redirect_back(fallback_location: root_path)
   end
 
+  def clear_cart
+    session[:cart].clear
+    redirect_back(fallback_location: root_path)
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_sale

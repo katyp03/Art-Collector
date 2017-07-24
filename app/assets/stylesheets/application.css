@@ -93,3 +93,9 @@ footer {
 	border-top: 2px solid black;
 	margin-top: 10px;
 }
+
+#cartAmount {
+	position: absolute;
+	top: 45px;
+	right: 88px;
+}
