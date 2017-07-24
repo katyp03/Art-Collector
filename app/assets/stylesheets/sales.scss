@@ -2,6 +2,24 @@
 #newSaleDiv {
 	margin: 0 auto;
 	text-align: center;
+
+	#clearCartSpan {
+		cursor: pointer;
+	}
+}
+
+div#newSaleDiv {
+
+	ul#saleThumbs {
+	width: 100%;
+
+		li.galleryPic {
+			width: 100px;
+			height: 100px;
+		}
+	}
+	// margin: 0 auto;
+	// display: inline-block;
 }
 // end of new sale (checkout) page
 
