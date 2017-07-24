@@ -21,11 +21,7 @@
   </div>
 
   <div class="field">
-    <%= form.text_field :artist_fname, id: :item_artist_fname, placeholder: 'Artist First Name' %>
-  </div>
-
-  <div class="field">
-    <%= form.text_field :artist_lname, id: :item_artist_lname, placeholder: 'Artist Last Name' %>
+    <%= form.select :artist_id, options_for_select( Artist.all.map{|a| [a.full_name, a.id]}), id: :item_artist_id %>
   </div>
 
   <div class="field">
@@ -36,8 +32,18 @@
     <%= form.text_field :style, id: :item_style, placeholder: 'Style' %>
   </div>
 
+  <!-- <div class="field">
+    <%# form.number_field :size, id: :item_size, placeholder: 'Size' %>
+  </div> -->
+
   <div class="field">
-    <%= form.number_field :size, id: :item_size, placeholder: 'Size' %>
+    <%= form.label :Size %><br />
+    <%= radio_button_tag(:size, "0") %>
+    <%= label_tag(:age_child, "Small") %>
+    <%= radio_button_tag(:age, "1") %>
+    <%= label_tag(:age_adult, "Medium") %>
+    <%= radio_button_tag(:age, "2") %>
+    <%= label_tag(:age_adult, "Large") %>
   </div>
 
   <!-- <div class="field">
