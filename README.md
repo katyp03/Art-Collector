@@ -1,27 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app was created as a way to test Rails in a art vendor type project.
+It allows to view, lease, and find art that is in the vendor's collection.
 
-Things you may want to cover:
+Test user login and password:
 
-* Ruby version
+User: barry@email.com
 
-* System dependencies
+Password: 12345678
 
-* Configuration
 
-* Database creation
+Technology used:
 
-* Database initialization
+* Sqlite3
 
-* How to run the test suite
+* Ruby on Rails
 
-* Services (job queues, cache servers, search engines, etc.)
+* UJS
 
-* Deployment instructions
+* Sass
 
-* ...
+* HTML/CSS
 
 
 <!-- rails g scaffold Artist fname:string lname:string
