@@ -5,7 +5,7 @@ It allows to view, lease, and find art that is in the vendor's collection.
 
 Test user login and password:
 
-User: barry@email.com
+User: barry@me.com
 
 Password: 12345678
 
